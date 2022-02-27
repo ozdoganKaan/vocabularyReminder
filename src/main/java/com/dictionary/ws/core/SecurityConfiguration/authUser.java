@@ -1,0 +1,32 @@
+package com.dictionary.ws.core.SecurityConfiguration;
+
+
+public class authUser {
+
+    private String userName;
+    private String password;
+
+    public authUser(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public authUser() {
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
