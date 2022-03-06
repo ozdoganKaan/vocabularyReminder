@@ -7,7 +7,7 @@ public class authUserResponse {
     private CustomUserDetails user;
     private String token;
 
-    public authUserResponse(CustomUserDetails user, String toke) {
+    public authUserResponse(CustomUserDetails user, String token) {
         this.user = user;
         this.token = token;
     }
