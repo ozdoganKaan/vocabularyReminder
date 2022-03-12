@@ -1,4 +1,4 @@
-package com.dictionary.ws.api.controller.UserController;
+package com.dictionary.ws.api.controller;
 
 import com.dictionary.ws.business.abstracts.UserService;
 import com.dictionary.ws.core.CustomAnnotation.CurrentUser;
