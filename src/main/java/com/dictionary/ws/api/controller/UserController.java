@@ -21,9 +21,12 @@ import javax.validation.Valid;
 public class UserController {
 
 
-    @Autowired
-    UserService userService;
 
+   private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping(path = "/x")
     public User  x(){
