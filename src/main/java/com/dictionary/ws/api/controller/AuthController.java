@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class AuthController {
 
-@Autowired
-    AuthManager authManager;
 
+public final AuthManager authManager;
 
+    public AuthController(AuthManager authManager) {
+        this.authManager = authManager;
+    }
 
     @PostMapping(path = "/api/auth")
     public authUserResponse handleAuth(@RequestBody authUser authUser) {

@@ -35,7 +35,7 @@ public class User {
     @NotBlank
     private String nameAndLastName;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<ListClass> lists=new ArrayList<>();
 
 

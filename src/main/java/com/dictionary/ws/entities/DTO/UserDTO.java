@@ -1,10 +1,14 @@
 package com.dictionary.ws.entities.DTO;
 
 import com.dictionary.ws.entities.concretes.User;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Component
+@Data
 public class UserDTO {
+
+    Long id;
 
     String userName;
 
@@ -13,6 +17,7 @@ public class UserDTO {
     String image;
 
     public UserDTO(User user) {
+        this.id = user.getId();
         this.userName = user.getUserName();
         this.nameAndLastName = user.getNameAndLastName();
         this.image = user.getImage();
@@ -21,27 +26,4 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getNameAndLastName() {
-        return nameAndLastName;
-    }
-
-    public void setNameAndLastName(String nameAndLastName) {
-        this.nameAndLastName = nameAndLastName;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 }

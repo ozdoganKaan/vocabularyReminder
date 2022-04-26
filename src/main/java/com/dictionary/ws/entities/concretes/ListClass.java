@@ -19,10 +19,7 @@ public class ListClass {
     private Date createDate;
 
 
-    @ManyToMany
-    @JoinTable(name = "lists_of_vocab",
-    joinColumns = @JoinColumn(name = "list_id"),
-    inverseJoinColumns = @JoinColumn(name = "vocabulary_id"))
+    @OneToMany(mappedBy = "listClass")
     private List<Vocabulary> vocabularyList= new ArrayList<>();
 
 
